@@ -1,8 +1,8 @@
 body {
     font-family: "Times new roman", Palatino, serif;
     background-color: #87CEFA;
-    font-size: 1.2em;
-    line-height: 1.8em;
+    font-size: 1.1em;
+    line-height: 1.6em;
     width: 80%;
     border: none;
     margin: 0px auto;
@@ -11,9 +11,9 @@ body {
 .container {
     background-color: floralwhite;
     margin: 0px auto;  
-    width: 50%;
+    width: 60%;
     border: thin solid black;
-    padding: 20px 20px 20px 40px;
+    padding: 30px;
     border-radius: 10px;
 }
 
@@ -21,7 +21,7 @@ h1 {
     font-size: 2em;
     font-weight: bold;
     text-shadow: 0 0 1.5px darkblue, 0 1.5px 0 white;
-
+    margin-top: 35px;
 }
 
 input[type=text],[type=email],[type=number], select{
@@ -51,33 +51,50 @@ input[type=number]:focus {
     box-shadow: 0 0 8px 0 dodgerblue;
 }
 
+.form-group{
+    padding-bottom: 15px;
+}
+
 select:focus {
     border-color: dodgerblue;
     box-shadow: 0 0 8px 0 dodgerblue;
 }
 
-
-header {
-    text-align: center;
+#required {
+    font-weight: bold;
 }
 
 #required::before {
     content: "*";
 }
 
+header {
+    text-align: center;
+}
+
+.question {
+    font-weight: bold;
+}
+
  .break {
     display: block;
 }
+
+textarea{
+    margin-left: 15px;
+    width: 30%;
+    padding: 8px;       
+}
+
 .button {
     display: block;
-    margin: 25px auto;
+    margin: 30px auto;
     width: 100px;
     padding: 5px;
     border-radius: 5px;
     font-weight: bold;
     font-size: 1em;
-    transition-duration: 0.4s;
-    
+    transition-duration: 0.4s; 
 }
 
 .button:hover{
