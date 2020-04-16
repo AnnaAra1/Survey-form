@@ -6,55 +6,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
     
+<body>
     <header>
     <h1>Survey form</h1>
     </header>
     
-<div class="container">  
-<section>
-    <form action="serverurl.php" method="post" autocomplete="on"></form>
-    <table>    
-        <h6 id="required">All fields are required</h6>    
-    <tr>
-        <td id="required">Name</td>
-        <td><input type="text" name="userName" placeholder="Enter your full name"/></td>
-    </tr>
+<form action="serverurl.php" method="post" autocomplete="on">
+ 
+<fieldset class="container">
+    
+    <div class="form-group">
+    <label for="name" id="required">Name:</label>
+    <input type="text" name="user-name" placeholder="Enter your full name"/>
+    </div>
+    
+    <div class="form-group">
+    <label for="email" id="required">Email:</label>
+    <input type="email" name="user-email" placeholder="Enter your email address"/>
+    </div>
         
-    <tr>
-        <td id="required">Email</td>
-        <td><input type="email" name="userEmail" placeholder="Enter your email address"/></td>
-    </tr>
+    <div class="form-group">
+    <label for="age" id="required">Age:</label>
+    <input type="number" placeholder="Age" name="user-age" min="0" max="115"/>
+    </div>
         
-    <tr>
-        <td id="required">Age</td>
-        <td><input type="number" placeholder="Age" name="userAge" min="0" max="115"/></td>
-    </tr>
+    <div class="form-group">
+    <label for="gender" id="required">Are you...?</label>
+    <input type="radio" name="gender" value="male"/>Male
+    <input type="radio" name="gender" value="female"/>Female
+    <input type="radio" name="gender" value="prefer-not-to-say"/>Prefer not to say<br>
+    </div>
         
-    <tr>
-        <td id="required">Are you...?</td>
-        <td>
-        <input type="radio" name="gender" value="male"/>Male
-        <input type="radio" name="gender" value="female"/>Female
-        <input type="radio" name="gender" value="preferNotToSay"/>Prefer not to say
-        </td>
-    </tr>
+    <div class="form-group">    
+    <label for="address" id="required">Home address:</label>
+    <input type="text" name="user-name" placeholder="Enter your home address"/>
+    </div>
         
-    <tr>
-        <td id="required">Home address</td>
-        <td><input type="text" name="userName"/></td>
-    </tr>
+    <div class="form-group">
+    <label for="town" id="required">Town/City:</label>
+    <input type="text" name="user-name"/>
+    </div>
         
-    <tr>
-        <td id="required">Town/City</td>
-        <td><input type="text" name="userName"/></td>
-    </tr>
-        
-    <tr>
-        <td id="required">Country</td>
-        <td>
-        <select>
+    <div class="form-group">
+    <label for="country" id="required">Country:</label>
+    <select>
         <option value="AF">Afghanistan</option>
         <option value="AX">Åland Islands</option>
         <option value="AL">Albania</option>
@@ -305,83 +301,56 @@
         <option value="ZM">Zambia</option>
         <option value="ZW">Zimbabwe</option>
     </select>
-        </td>        
-    </tr>
-        
-    <tr>
-        <td id="required">Postcode</td>
-        <td><input type="text" name="userZip" pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}"/></td>
-    </tr>
+    </div>    
     
-    
-    <tr>
-        <div class="frequency">
-        <td>How often do you shop online?</td>
-        <td>
+    <div class="form-group">    
+    <label for="postcode" id="required">Postcode:</label>
+    <input type="text" name="user-zip" pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}"/>
+    </div>    
+               
+
+    <label class="question">How often do you shop online?</label>
         <span class="break"><input type="radio" name="frequency" value="week">At least once a week</span>
         <span class="break"><input type="radio" name="frequency" value="month">Once per month</span>
         <span class="break"><input type="radio" name="frequency" value="sixmonths">Once every six months</span>
         <span class="break"><input type="radio" name="frequency" value="year">Once a year</span>
-        <span class="break"><input type="radio" name="frequency" value="never">Never</span>
-        </td>    
-    </div>
-    </tr>
+        <span class="break"><input type="radio" name="frequency" value="never">Never</span>   
     
-    <div>   
-    <tr>
-        <td>What would you purchase through online shopping?</td>
-        <td>    
+   
+    <hr><label class="question">What would you purchase through online shopping?</label>
         <span class="break"><input type="checkbox" name="specification" value="clothes">Clothes</span>
         <span class="break"><input type="checkbox" name="specification" value="electronics">Electronics</span>
         <span class="break"><input type="checkbox" name="specification" value="accessories">Accessories</span>
         <span class="break"><input type="checkbox" name="specification" value="householdItems">Household items</span>
-        <span class="break"><input type="checkbox" name="specification" value="other">Other, please specify</span>
-        </td>    
-    </tr>
-    </div> 
+        <span class="break"><input type="checkbox" name="specification" value="other">Other, please specify<textarea name="message"></textarea></span> 
         
-      <div> 
-      <tr>
-        <td>Which are the most common websites you are using for online shopping?</td>
-        <td>
+    <hr><label class="question">Which are the most common websites you are using for online shopping?</label>
         <span class="break"><input type="checkbox" name="website" value="amazon">Amazon.com</span>
         <span class="break"><input type="checkbox" name="website" value="ebay">Ebay.comc</span>
         <span class="break"><input type="checkbox" name="website" value="walmart">Walmart</span>
         <span class="break"><input type="checkbox" name="website" value="alibaba">Alibaba.com</span>
-        <span class="break"><input type="checkbox" name="website" value="other">Other, please specify</span>
-        </td>    
-    </tr>
-    </div> 
+        <span class="break"><input type="checkbox" name="website" value="other">Other, please specify<textarea name="message"></textarea></span>   
         
-    <div>
-    <tr>
-        <td>Which is your preferred payment mode in online shopping?</td>
-        <td>
-        <span class="break"><input type="checkbox" name="paymentMode" value="credit">Credit card</span>
-        <span class="break"><input type="checkbox" name="paymentMode" value="cash">Cash on delivery</span>
-        <span class="break"><input type="checkbox" name="paymentMode" value="netBanking">Net banking</span>
-        <span class="break"><input type="checkbox" name="paymentMode" value="debit">Debit card</span>
-        <span class="break"><input type="checkbox" name="website" value="prePaid">Pre-paid card</span>
-        </td>    
-    </tr>
-    </div>
+
+    <hr><label class="question">Which is your preferred payment mode in online shopping?</label>
+        <span class="break"><input type="checkbox" name="payment-mode" value="credit">Credit card</span>
+        <span class="break"><input type="checkbox" name="payment-mode" value="cash">Cash on delivery</span>
+        <span class="break"><input type="checkbox" name="payment-mode" value="net-banking">Net banking</span>
+        <span class="break"><input type="checkbox" name="payment-mode" value="debit">Debit card</span>
+        <span class="break"><input type="checkbox" name="payment-mode" value="pre-paid">Pre-paid card</span>  
         
-    <div>   
-    <tr>
-        <td>If you never had online shopping, please specify the reason</td>
-        <td>
-        <span class="break"><input type="checkbox" name="reason" value="riskOfCredit">Risk of credit card transactions</span>
-        <span class="break"><input type="checkbox" name="reason" value="internetIlliteracy">Internet illiteracy</span>
-        <span class="break"><input type="checkbox" name="reason" value="riskOfIdentity">Risk of identity theft</span>
-        <span class="break"><input type="checkbox" name="reason" value="iDontKnow">I don`t know about online shopping</span>
-        <span class="break"><input type="checkbox" name="reason" value="other">Other, please specify</span>
-        </td>    
-    </tr> 
-    </div> 
-          
-    </table>
-    <input class="button" type="submit"/>
-    </section>
-    </div>    
+   
+    <hr><label class="question">If you never had online shopping, please specify the reason</label>
+        <span class="break"><input type="checkbox" name="reason" value="risk-of-credit">Risk of credit card transactions</span>
+        <span class="break"><input type="checkbox" name="reason" value="internet-illiteracy">Internet illiteracy</span>
+        <span class="break"><input type="checkbox" name="reason" value="risk-of-identity">Risk of identity theft</span>
+        <span class="break"><input type="checkbox" name="reason" value="i-dont-know">I don`t know about online shopping</span>
+        <span class="break"><input type="checkbox" name="reason" value="other">Other, please specify<textarea name="message"></textarea></span>
+ 
+    
+    <input type="submit" class="button" value="Submit"/>
+        
+    </fieldset>
+</form>
 </body>
 </html>
